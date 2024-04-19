@@ -11,15 +11,12 @@ namespace MarsCompetition.Pages
 {
     public class LoginPage:CommonDriver
     {
-        private IWebDriver webDriver;
-        public LoginPage()
-        {
-            webDriver = driver;
-        }
-        private IWebElement signInButton => webDriver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
-        private IWebElement emailTextBox => webDriver.FindElement(By.Name("email"));
-        private IWebElement passwordTextBox => webDriver.FindElement(By.Name("password"));
-        private IWebElement loginButton => webDriver.FindElement(By.XPath("//button[contains(text(),'Login')]"));
+      
+
+        private IWebElement signInButton => driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/a"));
+        private IWebElement emailTextBox => driver.FindElement(By.Name("email"));
+        private IWebElement passwordTextBox => driver.FindElement(By.Name("password"));
+        private IWebElement loginButton => driver.FindElement(By.XPath("//button[contains(text(),'Login')]"));
 
         public void LoginActions( string EmailId, string Password)
         {

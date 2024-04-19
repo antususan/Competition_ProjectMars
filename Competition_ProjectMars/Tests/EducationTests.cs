@@ -20,27 +20,35 @@ namespace MarsCompetition.Tests
     {
         ProfilePage profilePageObj;
         JsonHelper jsonHelperObj;
+        EducationPage educationPageObj;
+
+        public EducationTests()
+        {
+            educationPageObj = new EducationPage();
+            profilePageObj = new ProfilePage();
+        }
 
         [Test, Order(1)]
         public void CreateEducationWithValidData()
         {
             
             test = extent.CreateTest("CreateEducationWithValidData").Info("Test 1- CreateEducationWithValidData Started");
-          
-            profilePageObj = new ProfilePage();
+           
+              
+            
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string AddEducationUsingValidDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\AddEducationUsingValidDatas.json";
+            educationPageObj.ResetEducationRow();
+            string AddEducationUsingValidDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\AddEducationUsingValidDatas.json";
             jsonHelperObj = new JsonHelper(AddEducationUsingValidDataPath);
             var AddEducationWithValidData = jsonHelperObj.ReadAddEducationUsingValidData();
             foreach (var item in AddEducationWithValidData)
             {
-                profilePageObj.CreateEducationRecordUsingValidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                string uniName = profilePageObj.AssertUniversityName();
-                string country = profilePageObj.AssertCountryName();
-                string title = profilePageObj.AssertTitleName();
-                string degree = profilePageObj.AssertDegreeName();
-                string year = profilePageObj.AssertYear();
+                educationPageObj.CreateEducationRecordUsingValidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                string uniName = educationPageObj.AssertUniversityName();
+                string country = educationPageObj.AssertCountryName();
+                string title = educationPageObj.AssertTitleName();
+                string degree = educationPageObj.AssertDegreeName();
+                string year = educationPageObj.AssertYear();
                 Assert.That(uniName == item.UniversityName, "University Name is not added sucessfully");
                 Assert.That(country == item.Country, "Country is not added successfully");
                 Assert.That(title == item.Title, "Title is not added sucessfully");
@@ -56,20 +64,20 @@ namespace MarsCompetition.Tests
         public void CreateEducationwithExistingData()
         {
             test = extent.CreateTest("CreateEducationwithExistingData").Info("Test 2- CreateEducationwithExistingData Started");
-            profilePageObj = new ProfilePage();
+           
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string AddEducationwithExisitingDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\Add EducationUsingExistingData.json";
+            educationPageObj.ResetEducationRow();
+            string AddEducationwithExisitingDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\Add EducationUsingExistingData.json";
             jsonHelperObj = new JsonHelper(AddEducationwithExisitingDataPath);
             var AddEducationWithExistingData = jsonHelperObj.ReadAddEducationUsingExistingData();
 
             foreach (var item in AddEducationWithExistingData)
             {
                 //profilePageObj.ResetEducationRow();
-                profilePageObj.CreateEducationUsingExistingData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                profilePageObj.CreateEducationUsingExistingData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                educationPageObj.CreateEducationUsingExistingData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                educationPageObj.CreateEducationUsingExistingData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
                 Thread.Sleep(2000);
-                string popupmessage = profilePageObj.PopUpMessage();
+                string popupmessage = educationPageObj.PopUpMessage();
                 Thread.Sleep(4000);
                 Assert.That(popupmessage == item.PopUpMessage, "Education with Existing Data added Successfully");
             }
@@ -83,18 +91,18 @@ namespace MarsCompetition.Tests
         public void CreateEducationWithDifferentYear()
         {
             test = extent.CreateTest("CreateEducationWithDifferentYear").Info("Test 3- CreateEducationWithDifferentYear Started");
-            profilePageObj = new ProfilePage();
+            
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string AddEducationWithDifferentYearDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\AddEducationWithDifferentYear.json";
+            educationPageObj.ResetEducationRow();
+            string AddEducationWithDifferentYearDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\AddEducationWithDifferentYear.json";
             jsonHelperObj = new JsonHelper(AddEducationWithDifferentYearDataPath);
             var AddEducationWithDifferentYearData = jsonHelperObj.ReadAddEducationUsingDifferentYearData();
             foreach (var item in AddEducationWithDifferentYearData)
             {
-                profilePageObj.createEducationWithDifferentYear(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                profilePageObj.createEducationWithDifferentYear(item.UniversityNameNew, item.CountryNew, item.TitleNew, item.DegreeNew, item.YearofgraduationNew);
+                educationPageObj.createEducationWithDifferentYear(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                educationPageObj.createEducationWithDifferentYear(item.UniversityNameNew, item.CountryNew, item.TitleNew, item.DegreeNew, item.YearofgraduationNew);
                 Thread.Sleep(5000);
-                string popupmessage = profilePageObj.PopUpMessage();
+                string popupmessage = educationPageObj.PopUpMessage();
                 Wait.Waittobevisible(driver, "xpath", "//*[@class='ns-box-inner']", 2);
                 Assert.That(popupmessage == item.PopUpMessage, "Education With Different Year added Successfully");
 
@@ -109,22 +117,22 @@ namespace MarsCompetition.Tests
         public void CreateEducationWithInvalidData()
         {
             test = extent.CreateTest("CreateEducationWithInvalidData").Info("Test 4- CreateEducationWithInvalidData Started");
-            profilePageObj = new ProfilePage();
+           
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string AddEducationWithInvalidDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\AddEducationUsingInvalidDatas.json";
+            educationPageObj.ResetEducationRow();
+            string AddEducationWithInvalidDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\AddEducationUsingInvalidDatas.json";
             jsonHelperObj = new JsonHelper(AddEducationWithInvalidDataPath);
             var AddEducationWithInvalidData = jsonHelperObj.ReadAddEducationUsingDifferentYearData();
 
             foreach (var item in AddEducationWithInvalidData)
             {
                 //profilePageObj.ResetEducationRow();
-                profilePageObj.createEducationWithInvalidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                string popupmessage = profilePageObj.PopUpMessage();
+                educationPageObj.createEducationWithInvalidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                string popupmessage = educationPageObj.PopUpMessage();
                 Thread.Sleep(5000);
                 Assert.That(popupmessage == item.PopUpMessage, "Education With Invalid Data added Successfully");
                 Thread.Sleep(2000);
-                profilePageObj.CancelButton();
+                educationPageObj.CancelButton();
             }
             string screenshotPath = TakeScreenshot(driver);
             test.Pass("Screenshot", MediaEntityBuilder.CreateScreenCaptureFromPath(screenshotPath).Build());
@@ -135,22 +143,22 @@ namespace MarsCompetition.Tests
         public void EditExistingEducationData()
         {
             test = extent.CreateTest("EditExistingEducationData").Info("Test 5- EditExistingEducationData Started");
-            profilePageObj = new ProfilePage();
+           
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string UpdateAnExistingEducationDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\UpdateAnExistingEducationData.json";
+            educationPageObj.ResetEducationRow();
+            string UpdateAnExistingEducationDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\UpdateAnExistingEducationData.json";
             jsonHelperObj = new JsonHelper(UpdateAnExistingEducationDataPath);
             var UpdateAnExistingEducationData = jsonHelperObj.ReadUpdateAnExisitngEducationData();
             foreach (var item in UpdateAnExistingEducationData)
             {
-                profilePageObj.CreateEducationRecordUsingValidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                profilePageObj.UpdateAnExistingEducationData(item.UniversityNameNew, item.CountryNew, item.TitleNew, item.DegreeNew, item.YearofgraduationNew);
+                educationPageObj.CreateEducationRecordUsingValidData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                educationPageObj.UpdateAnExistingEducationData(item.UniversityNameNew, item.CountryNew, item.TitleNew, item.DegreeNew, item.YearofgraduationNew);
                 
-                string uniName = profilePageObj.AssertUniversityName();
-                string country = profilePageObj.AssertCountryName();
-                string title = profilePageObj.AssertTitleName();
-                string degree = profilePageObj.AssertDegreeName();
-                string year = profilePageObj.AssertYear();
+                string uniName = educationPageObj.AssertUniversityName();
+                string country = educationPageObj.AssertCountryName();
+                string title = educationPageObj.AssertTitleName();
+                string degree = educationPageObj.AssertDegreeName();
+                string year = educationPageObj.AssertYear();
                 Assert.That(uniName == item.UniversityNameNew, "University Name is not updated sucessfully");
                 Assert.That(country == item.CountryNew, "Country is not updated successfully");
                 Assert.That(title == item.TitleNew, "Title is not updated sucessfully");
@@ -167,18 +175,18 @@ namespace MarsCompetition.Tests
         public void DeleteEducation()
         {
             test = extent.CreateTest("DeleteEducation").Info("Test 6- DeleteEducation Started");
-            profilePageObj = new ProfilePage();
+            
             profilePageObj.GoToEducationTab();
-            profilePageObj.ResetEducationRow();
-            string DeleteEducationDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\EducationDatas\\DeleteEducationData.json";
+            educationPageObj.ResetEducationRow();
+            string DeleteEducationDataPath = "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\JsonDatas\\EducationDatas\\DeleteEducationData.json";
             jsonHelperObj = new JsonHelper(DeleteEducationDataPath);
             var DeleteEducationDatas = jsonHelperObj.ReadDeleteEducationData();
             foreach (var item in DeleteEducationDatas)
             {
-                profilePageObj.DeleteEducationData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
-                profilePageObj.DeleteButton();
+                educationPageObj.DeleteEducationData(item.UniversityName, item.Country, item.Title, item.Degree, item.Yearofgraduation);
+                educationPageObj.DeleteButton();
                 
-                string popupmessage = profilePageObj.PopUpMessage();
+                string popupmessage = educationPageObj.PopUpMessage();
                 Thread.Sleep(4000);
                 Assert.That(popupmessage == item.PopUpMessage, "Record has not been deleted Sucessfully");
             }

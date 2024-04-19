@@ -10130,11 +10130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\MarsCompetition.csproj",
+      "projectUniqueName": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj",
       "projectName": "MarsCompetition",
-      "projectPath": "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\MarsCompetition.csproj",
+      "projectPath": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj",
       "packagesPath": "C:\\Users\\i2kuj\\.nuget\\packages\\",
-      "outputPath": "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\obj\\",
+      "outputPath": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\i2kuj\\AppData\\Roaming\\NuGet\\NuGet.Config",

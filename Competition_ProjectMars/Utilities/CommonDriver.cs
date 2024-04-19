@@ -15,7 +15,6 @@ namespace MarsCompetition.Utilities
     public class CommonDriver:ExtentHelper
     {
         public static IWebDriver driver;
-        
 
         [SetUp]
         public void SetUp()
@@ -27,8 +26,9 @@ namespace MarsCompetition.Utilities
             string loginDataPath = "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\JsonDatas\\LoginDatas\\LoginData.json";
             JsonHelper jsonHelperObj = new JsonHelper(loginDataPath);
             // List<Login> login = new List<Login>();
+            LoginPage loginpageObj=  new LoginPage(); 
             var login = jsonHelperObj.ReadLoginData();
-            LoginPage loginpageObj = new LoginPage();
+             
             foreach (var item in login)
             {
                 loginpageObj.LoginActions(item.EmailId, item.Password);

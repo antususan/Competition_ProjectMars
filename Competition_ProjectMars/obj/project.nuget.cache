@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zmCZdXcsrHeAF8DEHMZjRCYjCnqt7gXqlMkGNLmry/nFaJfP1YbrrvQh1+xvx44w6J/+q4pl9rxbC7UqlyHpfA==",
+  "dgSpecHash": "arBXqK1vgVsooBObyGFwtWDOV8P3Br/K2O44SeFgOOwT88ZGWtzO34toHopZy9FjN5BbvZG8molqgLCWJvdK6w==",
   "success": true,
-  "projectFilePath": "D:\\Test Analyst\\ProjectMars\\ProjectMars_Competition\\MarsCompetition\\MarsCompetition.csproj",
+  "projectFilePath": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\i2kuj\\.nuget\\packages\\dnsclient\\1.2.0\\dnsclient.1.2.0.nupkg.sha512",
     "C:\\Users\\i2kuj\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",

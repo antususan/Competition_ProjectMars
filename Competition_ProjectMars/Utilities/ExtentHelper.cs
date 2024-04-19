@@ -18,7 +18,7 @@ namespace MarsCompetition.Utilities
             if(extent == null) 
             {
                 extent = new ExtentReports();
-                string reportPath = @"D:\Test Analyst\ProjectMars\ProjectMars_Competition\MarsCompetition\ExtentReports\ExtentRepots.html";
+                string reportPath = @"D:\Test Analyst\ProjectMars\NewCompetitionTask_ProjectMars\Competition_ProjectMars\Competition_ProjectMars\ExtentReports\Reports.html";
                 var htmlReporter = new ExtentHtmlReporter(reportPath);
                 extent.AttachReporter(htmlReporter);
 
@@ -26,7 +26,7 @@ namespace MarsCompetition.Utilities
         }
         public string TakeScreenshot(IWebDriver driver)
         {
-            string directoryPath = @"D:\Test Analyst\ProjectMars\ProjectMars_Competition\MarsCompetition\ExtentReports";
+            string directoryPath = @"D:\Test Analyst\ProjectMars\NewCompetitionTask_ProjectMars\Competition_ProjectMars\Competition_ProjectMars\ExtentReports";
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
