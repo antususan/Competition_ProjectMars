@@ -1,0 +1,23 @@
+﻿[
+  {
+    "Certificate": "ISTQB",
+    "From": "Testers.com",
+    "Year": 2021
+  },
+  {
+
+    "Certificate": "12345agh$%^&*((*&^",
+    "From": "%^&*456778",
+    "Year": 2022
+  },
+  {
+    "Certificate": "I am adding a sentance",
+    "From": "Again adding a sentence",
+    "Year": 2022
+  },
+  {
+    "Certificate": "RemembertoplayaroundwiththeapplicationtrytoexplorethefunctionalityaroundwhatthelanguageandskillsfeatureshavetoofferintheprofilepageRemembertouseGoogleQuestionhuborStackOverflowifyouarestuckonaproblem,weknowattimesitcanbefrustratingtobestuckonaproblem",
+    "From": "tAsserting the correct expected data with the actual data (using expected test data from the JSON files and not hardcoded).",
+    "Year": 2022
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj": {}
+  },
+  "projects": {
+    "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj",
+        "projectName": "MarsCompetition",
+        "projectPath": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\MarsCompetition.csproj",
+        "packagesPath": "C:\\Users\\i2kuj\\.nuget\\packages\\",
+        "outputPath": "D:\\Test Analyst\\ProjectMars\\NewCompetitionTask_ProjectMars\\Competition_ProjectMars\\Competition_ProjectMars\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\i2kuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "ExtentReports": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "ExtentReports.Core": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.9.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[122.0.6261.9400, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
