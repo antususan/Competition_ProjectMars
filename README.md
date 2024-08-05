@@ -9,7 +9,7 @@ I also reported defects using JIRA.
 
 ## Branches
 The repository contains the following branches: 
-main: 
+main: N/A , 
 feature/branch-name**: Competition_Tasks - It contains manual test cases and automation code .
 
 ## How to Review
