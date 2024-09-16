@@ -1,0 +1,44 @@
+﻿[
+  {
+    "UniversityName": "",
+    "Country": "India",
+    "Title": "B.Tech",
+    "Degree": "",
+    "Yearofgraduation": 2017,
+    "PopUpMessage": "Please enter all the fields"
+  },
+  {
+    "UniversityName": "GISAT",
+    "Country": "India",
+    "Title": "B.A",
+    "Degree": "",
+    "Yearofgraduation": 2017,
+    "PopUpMessage": "Please enter all the fields"
+  },
+  {
+    "UniversityName": "",
+    "Country": "India",
+    "Title": "B.A",
+    "Degree": "Computer Science",
+    "Yearofgraduation": 2017,
+    "PopUpMessage": "Please enter all the fields"
+
+  },
+  {
+    "UniversityName": "Mahatma Gandhi",
+    "Country": "India",
+    "Title": "B.A",
+    "Degree": "Computer Science",
+    "Yearofgraduation": "",
+    "PopUpMessage": "Please enter all the fields"
+  },
+  {
+    "UniversityName": "Mahatma Gandhi",
+    "Country": "",
+    "Title": "B.A",
+    "Degree": "Computer Science",
+    "Yearofgraduation": "2020",
+    "PopUpMessage": "Please enter all the fields"
+  }
+  
+]

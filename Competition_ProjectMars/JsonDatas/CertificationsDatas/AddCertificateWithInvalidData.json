@@ -1,0 +1,28 @@
+﻿[
+  {
+    "Certificate": "",
+    "From": "",
+    "Year": 2021,
+    "PopUpMessage": "Please enter Certification Name, Certification From and Certification Year"
+  },
+  {
+    "Certificate": "",
+    "From": "Testers.com",
+    "Year": 2021,
+    "PopUpMessage": "Please enter Certification Name, Certification From and Certification Year"
+  },
+  {
+    "Certificate": "ISTQB",
+    "From": "",
+    "Year": 2021,
+    "PopUpMessage": "Please enter Certification Name, Certification From and Certification Year"
+
+  },
+  {
+    "Certificate": "ISTQB",
+    "From": "Testers.com",
+    "Year": "",
+    "PopUpMessage": "Please enter Certification Name, Certification From and Certification Year"
+  }
+
+]

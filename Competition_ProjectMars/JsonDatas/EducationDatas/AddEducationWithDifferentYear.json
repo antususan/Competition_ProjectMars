@@ -1,0 +1,17 @@
+﻿[
+  {
+    "UniversityName": "Mahatma Gandhi University",
+    "Country": "India",
+    "Title": "B.Tech",
+    "Degree": "Computer Science",
+    "Yearofgraduation": 2017,
+    "UniversityNameNew": "Mahatma Gandhi University",
+    "CountryNew": "India",
+    "TitleNew": "B.Tech",
+    "DegreeNew": "Computer Science",
+    "YearofgraduationNew": 2020,
+    "PopUpMessage": "Duplicated data"
+  }
+
+  
+]
